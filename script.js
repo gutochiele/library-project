@@ -24,4 +24,23 @@ function addBook(){
 
     let addToLibrary = new Book(title, author, pages, read, index);
     myLibrary.push(addToLibrary)
+    document.getElementById("add-book").reset();
+    addBookCard();
+}
+
+function addBookCard(){
+
+    const libraryDisplay = document.getElementById("library-display");
+    libraryDisplay.innerHTML = '';
+
+    for (let i = 0; i < myLibrary.length; i++) {
+        const card = document.createElement('div');
+        const book = myLibrary[i];
+        card.innerHTML = `
+        <h2>${book.title}</h2>
+        <p>Author: ${book.author}</p>
+        <p>Pages: ${book.pages}</p>
+        <p>Status: ${book.read ? 'Read' : 'Unread'}</p>`;
+        libraryDisplay.appendChild(card);
+    }
 }
