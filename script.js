@@ -29,7 +29,6 @@ function addBook(){
 }
 
 function addBookCard(){
-
     const libraryDisplay = document.getElementById("library-display");
     libraryDisplay.innerHTML = '';
 
