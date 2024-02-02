@@ -31,15 +31,24 @@ function addBook(){
 function addBookCard(){
     const libraryDisplay = document.getElementById("library-display");
     libraryDisplay.innerHTML = '';
-
     for (let i = 0; i < myLibrary.length; i++) {
         const card = document.createElement('div');
+        card.className = "card";
         const book = myLibrary[i];
         card.innerHTML = `
         <h2>${book.title}</h2>
         <p>Author: ${book.author}</p>
         <p>Pages: ${book.pages}</p>
-        <p>Status: ${book.read ? 'Read' : 'Unread'}</p>`;
+        <p>Status: ${book.read ? 'Read' : 'Unread'}</p>
+        <button type="button" class="rmv-btn" data-index="${i}"><i class="material-icons">delete</i></button>`;
         libraryDisplay.appendChild(card);
+    }
+    const removeBtns = document.getElementsByClassName("rmv-btn");
+    for (let btn of removeBtns) {
+        btn.addEventListener("click", function(){
+            const index = this.getAttribute("data-index");
+            myLibrary.splice(index, 1); // Remove the book from the library array
+            addBookCard(); // Re-render the library display 
+        });
     }
 }

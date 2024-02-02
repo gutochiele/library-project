@@ -5,36 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>My Library</h1>
         </div>
-        <div class="main-content">
-            <div class="form-box">
-                <form id="add-book" action="" method="">
-                    <div class="input-style">
-                        <label for="book-title">Book Title</label>
-                        <input type="text" id="book-title" name="book-title" required><br>
-                    </div>
-                    <div class="input-style">
-                        <label for="author">Author</label>
-                        <input type="text" id="author" name="author" required><br>
-                    </div>
-                    <div class="input-style">
-                        <label for="pages">Pages</label>
-                        <input type="tel" name="pages" id="pages" required><br>
-                    </div>
-                    <div class="input-style">
-                        <label for="read">Read</label>
-                        <input type="checkbox" name="read" id="read"><br>
-                    </div>
-                    <button type="submit">Add Book</button>
-                </form>
-            </div>
-            <div id="library-display"></div>
+        <div class="form-box">
+            <form id="add-book" action="" method="">
+                <div class="input-style">
+                    <label for="book-title">Book Title</label>
+                    <input type="text" id="book-title" name="book-title" required><br>
+                </div>
+                <div class="input-style">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author" required><br>
+                </div>
+                <div class="input-style">
+                    <label for="pages">Pages</label>
+                    <input type="tel" name="pages" id="pages" required><br>
+                </div>
+                <div class="input-style">
+                    <label for="read">Read</label>
+                    <input type="checkbox" name="read" id="read"><br>
+                </div>
+                <button type="submit">Add Book</button>
+            </form>
         </div>
+        <div id="library-display"></div>
     </div>
 <script src="script.js"></script>
 </body>
