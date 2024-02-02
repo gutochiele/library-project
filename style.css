@@ -30,12 +30,13 @@ body {
     justify-content: space-between;    
 }
 
+
 .rmv-btn{
-    background-color: rgba(30, 143, 255, 0); /* Blue background */
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    font-size: 16px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
+    background-color: #1e8fff00; 
+    border: none; 
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .card-end{
@@ -67,7 +68,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
+    gap: 10px;
     justify-items: start;
     align-items: start;
 }

@@ -42,7 +42,7 @@ function addBookCard(){
         <div class="card-end"><p>Read: ${book.read ? `<input type="checkbox" id="read" checked>` : `<input type="checkbox" id="unread">`}</p>
         <button type="button" class="rmv-btn" data-index="${i}"><i class="material-icons">delete</i></button></div>`    
         ;
-        libraryDisplay.appendChild(card);
+        libraryDisplay.insertBefore(card, libraryDisplay.firstChild);
     }
     const removeBtns = document.getElementsByClassName("rmv-btn");
     for (let btn of removeBtns) {
