@@ -13,24 +13,25 @@
             <h1>My Library</h1>
         </div>
         <div class="form-box">
-            <form id="add-book" action="" method="">
+            <form id="add-book" action="" method="" autocomplete="off">
                 <div class="input-style">
-                    <label for="book-title">Book Title</label>
+                    <label for="book-title">Book Title</label><br>
                     <input type="text" id="book-title" name="book-title" required><br>
                 </div>
                 <div class="input-style">
-                    <label for="author">Author</label>
+                    <label for="author">Author</label><br>
                     <input type="text" id="author" name="author" required><br>
                 </div>
                 <div class="input-style">
-                    <label for="pages">Pages</label>
+                    <label for="pages">Pages</label><br>
                     <input type="tel" name="pages" id="pages" required><br>
                 </div>
-                <div class="input-style">
+                <div class="input-style read">
                     <label for="read">Read</label>
                     <input type="checkbox" name="read" id="read"><br>
                 </div>
-                <button type="submit">Add Book</button>
+                <button type="submit" id="submit">Add Book</button>
+                <input autocomplete="false" name="hidden" type="text" style="display:none;">
             </form>
         </div>
         <div id="library-display"></div>

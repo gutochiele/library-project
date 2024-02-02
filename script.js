@@ -36,11 +36,12 @@ function addBookCard(){
         card.className = "card";
         const book = myLibrary[i];
         card.innerHTML = `
-        <h2>${book.title}</h2>
+        <div class="card-start"><h2>${book.title}</h2>
         <p>Author: ${book.author}</p>
-        <p>Pages: ${book.pages}</p>
-        <p>Status: ${book.read ? 'Read' : 'Unread'}</p>
-        <button type="button" class="rmv-btn" data-index="${i}"><i class="material-icons">delete</i></button>`;
+        <p>Pages: ${book.pages}</p></div>
+        <div class="card-end"><p>Read: ${book.read ? `<input type="checkbox" id="read" checked>` : `<input type="checkbox" id="unread">`}</p>
+        <button type="button" class="rmv-btn" data-index="${i}"><i class="material-icons">delete</i></button></div>`    
+        ;
         libraryDisplay.appendChild(card);
     }
     const removeBtns = document.getElementsByClassName("rmv-btn");
