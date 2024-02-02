@@ -8,7 +8,6 @@ function Book(title, author, pages, read, index) {
 
 const myLibrary = [];
 
-
 document.getElementById("add-book").addEventListener("submit", function(event) {
     event.preventDefault();
     addBook(event);
