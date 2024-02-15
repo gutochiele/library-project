@@ -8,7 +8,6 @@ class Book {
     }
 }
 
-
 // function Book(title, author, pages, read, index) {
 //     this.title = title;
 //     this.author = author;
